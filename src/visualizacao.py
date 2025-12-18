@@ -1,13 +1,18 @@
-import os
-
-os.environ["PATH"] += os.pathsep + r"C:\Program Files\Graphviz\bin"
-
+import os, platform
 from graphviz import Digraph
 
+'''def config_path_graphviz():
+    if platform.system() == "Windows":
+        path_bin = r"C:\Program Files\Graphviz\bin"
+
+        if os.path.exists(path_bin):
+            os.environ["PATH"] += os.pathsep + path_bin
+'''
 
 def visualizar_afd(afd):
+    #config_path_graphviz()
     dot = Digraph(format="png")
-    dot.attr(rankdir="LR")  # esquerda → direita
+    dot.attr(rankdir="LR", size="8,5")  # esquerda → direita
 
     # Estados
     for estado in afd["estados"]:

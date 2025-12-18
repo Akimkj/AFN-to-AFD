@@ -1,0 +1,7 @@
+digraph {
+	rankdir=LR size="8,5"
+	A [shape=circle]
+	"" [shape=none]
+	"" -> A
+	A -> A [label="0,1"]
+}
