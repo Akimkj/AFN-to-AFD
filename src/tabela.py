@@ -1,13 +1,13 @@
 def imprimir_tabela_afd(afd):
     estados = afd["estados"]  # lista de estados do AFD (já em formato de string)
-    simbolos = afd["simbolos"]  # lista de símbolos do alfabeto do AFD
+    simbolos = list(afd["simbolos"])  # lista de símbolos do alfabeto do AFD
     transicoes = afd["transicoes"]  # dicionário de transições do AFD: (estado, símbolo) -> destino
 
     # largura fixa para formatar cada coluna na tabela
     largura = 15   
 
     # cria o cabeçalho da tabela: primeiro "Estado", depois cada símbolo
-    cabecalho = ["Estado"] + simbolos 
+    cabecalho = ["Função programa"] + simbolos 
 
     # monta a linha do cabeçalho já centralizada
     linha_cabecalho = " | ".join(h.ljust(largura) for h in cabecalho)

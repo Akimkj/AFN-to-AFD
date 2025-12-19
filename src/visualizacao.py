@@ -1,4 +1,4 @@
-import os, platform
+#import os, platform
 from graphviz import Digraph
 
 '''def config_path_graphviz():
@@ -16,6 +16,10 @@ def visualizar_afd(afd):
 
     # Estados
     for estado in afd["estados"]:
+
+        if estado == "{}" or estado == "set()":
+            continue
+        
         if estado in afd["finais"]:
             dot.node(estado, shape="doublecircle")
         else:
@@ -34,6 +38,7 @@ def visualizar_afd(afd):
         rotulo = ",".join(simbolos)
         dot.edge(origem, destino, label=rotulo)
 
-    dot.view()
+
+    dot.render("afd", directory="outputAFD", view=True)
 
 

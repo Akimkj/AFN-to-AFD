@@ -23,7 +23,7 @@ def trasition(afn, conjunto, simbolo):
 def set_to_string(s):
     if len(s) == 0:
         return "{}"
-    return ",".join(sorted(s))
+    return "".join(sorted(s))
 
 
 """
@@ -61,7 +61,7 @@ def afn_to_afd(afn):
 
     #Conjuntos e objetos que serão usados para formar o AFD
     afdTransicoes = {}
-    afdEstados = set([inicial])
+    afdEstados = set([inicial]) 
     afdFinais = set()
 
     #------ Subset Construction --------
@@ -76,7 +76,6 @@ def afn_to_afd(afn):
 
             # Se destino é vazio, NÃO adiciona como estado do AFD
             if len(destino) == 0:
-                afdTransicoes[(atual, simb)] = frozenset()
                 continue
 
             afdTransicoes[(atual, simb)] = destino
