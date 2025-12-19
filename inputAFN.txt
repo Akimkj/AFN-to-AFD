@@ -1,0 +1,12 @@
+inicial: 0
+estados: 0 1 2
+simbolos: a b c
+finais: 0 2
+0a1
+1a0
+0b0
+1b1
+0c2
+2c2
+2a2
+2b2
