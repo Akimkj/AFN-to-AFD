@@ -1,12 +1,15 @@
-inicial: 0
-estados: 0 1 2
+inicial: 
+estados: 0 1 2 3
 simbolos: a b c
-finais: 0 2
-0a1
-1a0
-0b0
-1b1
+finais: 2 3
+transicoes:
+0a0
+0b5
+0c0
 0c2
-2c2
-2a2
-2b2
+1a2
+1e2
+1c2
+2a3
+2b4
+2c3

@@ -8,7 +8,3 @@ afn = inputSearch('inputAFN.txt')
 afd = afn_to_afd(afn)
 imprimir_tabela_afd(afd)
 visualizar_afd(afd)
-
-
-
-

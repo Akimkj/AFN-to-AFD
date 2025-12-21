@@ -112,10 +112,3 @@ def afn_to_afd(afn):
         afd["transicoes"][(origem, simb)] = destino
     
     return afd
-
-
-
-
-
-
-
