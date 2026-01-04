@@ -1,5 +1,12 @@
 #Função de validação do AFN de entrada
 def validarAFN(afn):
+    if (len(afn["estados"]) > 4):
+        raise ValueError("[RESTRIÇÃO] - A quantidade máxima de estados é 4")
+    if (len(afn["simbolos"]) > 3):
+        raise ValueError("[RESTRIÇÃO] - A quantidade máxima de símbolos é 3")
+    if (len(afn["transicoes"]) > 8):
+        raise ValueError("[RESTRIÇÃO] - A quantidade máxima de transições é 8")
+
     erros = []
 
     #verifica se o estado inicial está entre os estados inseridos
@@ -24,6 +31,7 @@ def validarAFN(afn):
     #caso haja algum erro, será disparado uma exceção e a execução será interrompida
     if erros:
         raise ValueError("AFN Inválido:\n" + "\n".join(erros))
+    
 
 
 
