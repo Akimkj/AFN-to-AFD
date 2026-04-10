@@ -11,7 +11,7 @@ def validarAFN(afn):
 
     #verifica se o estado inicial está entre os estados inseridos
     if afn["inicial"] not in afn["estados"]:
-        erros.append(f"Estado inicial {afn["inicial"]} não está entre os estados")
+        erros.append(f'Estado inicial {afn["inicial"]} não está entre os estados')
 
     #verifica se os estados finais estão entre os estados inseridos
     for final in afn["finais"]:
